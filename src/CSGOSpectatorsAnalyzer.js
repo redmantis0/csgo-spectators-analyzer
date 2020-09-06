@@ -6,6 +6,9 @@ class CSGOSpectatorsAnalyzer {
 
     constructor(filePath) {
         this.filePath = filePath;
+        
+        // Initializes internal state
+        this._init();
     }
 
     _init() {
@@ -13,11 +16,12 @@ class CSGOSpectatorsAnalyzer {
         this.demoFile = new demofile.DemoFile();
     }
 
+    getDemoFile() {
+        return this.demoFile;
+    }
+
     analyze() {
         return new Promise((resolve, reject) => {
-
-            // Initializes internal state
-            this._init();
 
             // Reads the file
             fs.readFile(this.filePath, (err, buffer) => {
