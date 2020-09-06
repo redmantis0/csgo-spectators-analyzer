@@ -1,10 +1,13 @@
 {
   "name": "csgo-spectators-analyzer",
   "version": "0.0.3",
-  "description": "",
+  "description": "CSGO Spectators Analyzer will find if the spectator bug is being exploited.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "cli": "./bin/cli.js"
+  },
+  "bin": {
+    "csacli": "./bin/cli.js"
   },
   "author": "RedMantis0",
   "license": "MIT",
