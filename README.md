@@ -2,6 +2,10 @@
 
 This is a super basic NodeJS module to analyze CSGO demos and checks if a spectator is abusing a recent bug which would allow him to gain information he shouldn't have.
 
+## Disclaimer
+
+This software will never give you a perfect answer with a 100% accuracy. This should only be used to find if someone "is likely" using the bug.
+
 ## Software requirements
 
 - [NodeJS](https://nodejs.org/en/download/ "NodeJS' official downloads page")
