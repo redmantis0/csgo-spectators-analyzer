@@ -1,6 +1,6 @@
 # CSGO Spectators Analyzer
 
-This is a super basic NodeJS module to analyze CSGO demos and check if a spectator is abusing a recent bug which would allow him to gain information he shouldn't have.
+This is a super basic NodeJS module to analyze CSGO demos and checks if a spectator is abusing a recent bug which would allow him to gain information he shouldn't have.
 
 ## Software requirements
 
