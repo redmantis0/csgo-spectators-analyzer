@@ -21,14 +21,14 @@ async function analyzeDemos(filenames) {
 }
 
 function analyze(filename) {
-        console.log('Analyzing "%s"...', filename);
-        const csa = new CSGOSpectatorsAnalyzer(filename);
-        
-        csa.analyze().then(res => {       
-            console.log('File "%s" analisys completed. Results:', filename);
-            csa.printSpectators();
-        }).catch(err => {
-            console.log('An error occourred trying to analyze the file "%s": %s', filename, err.message);
-        });
+    console.log('Analyzing "%s"...', filename);
+    const csa = new CSGOSpectatorsAnalyzer(filename);
+    
+    csa.analyze().then(res => {       
+        console.log('File "%s" analisys completed. Results:', filename);
+        csa.printSpectators();
+    }).catch(err => {
+        console.log('An error occourred trying to analyze the file "%s": %s', filename, err.message);
+    });
 }
 
