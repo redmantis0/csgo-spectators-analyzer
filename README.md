@@ -2,11 +2,29 @@
 
 This is a super basic NodeJS module to analyze CSGO demos and check if a spectator is abusing a recent bug which would allow him to gain information he shouldn't have.
 
+## Software requirements
+
+- [NodeJS](https://nodejs.org/en/download/ "NodeJS' official downloads page")
+- NPM (Node Package Manager. Automatically installed with NodeJS)
+
 ## Installation
+
+### Command Line Tool
+
+Run `npm install -g csgo-spectators-analyzer`
+
+### NodeJS module
 
 Run `npm install csgo-spectators-analyzer`
 
-## Example
+## Usage
+
+### Command Line Tool usage
+
+- Single file: `csacli <demo.dem>`
+- Multiple file: `csacli <demo.dem> [demo2.dem] [demo3.dem]...`
+
+### NodeJS module example
 
 ```
 var CSGOSpectatorsAnalyzer = require('csgo-spectators-analyzer');
