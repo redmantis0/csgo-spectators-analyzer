@@ -13,22 +13,26 @@ analyzeDemos(args);
 
 async function analyzeDemos(filenames) {
     for(const filename of filenames) {
-        analyze(filename);
-        
-        // Add separator
+        await analyze(filename).catch();
+
+        // Add spacing
         console.log();
     }
 }
 
 function analyze(filename) {
-    console.log('Analyzing "%s"...', filename);
-    const csa = new CSGOSpectatorsAnalyzer(filename);
-    
-    csa.analyze().then(res => {       
-        console.log('File "%s" analisys completed. Results:', filename);
-        csa.printSpectators();
-    }).catch(err => {
-        console.log('An error occourred trying to analyze the file "%s": %s', filename, err.message);
+    return new Promise((resolve, reject) => {
+
+        console.log('Analyzing "%s"...', filename);
+        const csa = new CSGOSpectatorsAnalyzer(filename);
+        
+        csa.analyze().then(res => {       
+            console.log('File "%s" analisys completed. Results:', filename);
+            csa.printSpectators();
+            resolve(res);
+        }).catch(err => {
+            console.log('An error occourred trying to analyze the file "%s": %s', filename, err.message);
+            reject(err);
+        });
     });
 }
-
