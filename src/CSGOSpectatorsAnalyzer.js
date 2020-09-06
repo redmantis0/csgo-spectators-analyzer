@@ -38,7 +38,11 @@ class CSGOSpectatorsAnalyzer {
                 });
 
                 // Start parsing the file
-                this.demoFile.parse(buffer);
+                try {
+                    this.demoFile.parse(buffer);
+                } catch (e) {
+                    reject(e);
+                }
             });
         });
     }
