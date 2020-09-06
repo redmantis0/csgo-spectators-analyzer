@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "RedMantis0",
+  "license": "MIT",
   "dependencies": {
     "demofile": "^1.5.0"
   },
